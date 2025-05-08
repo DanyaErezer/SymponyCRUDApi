@@ -1,0 +1,3 @@
+[submodule "docker-starter"]
+	path = docker-starter
+	url = https://github.com/DanyaErezer/docker-starter.git
