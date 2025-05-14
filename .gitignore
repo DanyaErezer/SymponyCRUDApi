@@ -14,10 +14,23 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
-###> symfony/phpunit-bridge ###
-.phpunit.result.cache
-/phpunit.xml
-###< symfony/phpunit-bridge ###
+Игнорировать папку docker-starter (сабмодуль)
+docker-starter/* !docker-starter/.gitmodules
+
+Игнорировать контейнерные данные, логи, временные файлы внутри docker-starter
+/docker-starter/db_data/ /docker-starter/logs/ /docker-starter/.docker/
+
+Игнорировать Laravel
+.env /storage/.key /vendor/ storage/ /node_modules/
+
+Логи
+/storage/logs/* *.log
+
+Дамп БД
+*.sql *.sql.gz
+
+Прочее
+.DS_Store *.swp
 
 ###> symfony/asset-mapper ###
 /public/assets/
